@@ -44,3 +44,4 @@ RUN $HOME/.cargo/bin/cargo rustc --release --target=x86_64-pc-windows-gnu -- -C 
 COPY ./build-hemtt.sh /
 RUN chmod +x /build-hemtt.sh
 ENTRYPOINT ["/build-hemtt.sh"]
+VOLUME /usr/share/target
